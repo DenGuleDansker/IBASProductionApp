@@ -9,6 +9,14 @@ namespace IBASProductionApp
     {
         private readonly ILogger _logger;
 
+        public class MultiResponse
+        {
+            [CosmosDBOutput("IBasSupportDB", "bikeline",
+            Connection = "CosmosDbConnectionString", CreateIfNotExists = false)]
+            public ProductionItem? Document { get; set; }
+            public HttpResponseData? HttpResponse { get; set; }
+        }
+
         public IBASGetTrigger(ILoggerFactory loggerFactory)
         {
             _logger = loggerFactory.CreateLogger<IBASGetTrigger>();
