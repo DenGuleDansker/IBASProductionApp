@@ -1,12 +1,19 @@
 {
     "version": "2.0",
     "logging": {
-        "applicationInsights": {
-            "samplingSettings": {
-                "isEnabled": true,
-                "excludedTypes": "Request"
-            },
-            "enableLiveMetricsFilters": true
+      "applicationInsights": {
+        "samplingSettings": {
+          "isEnabled": true,
+          "excludedTypes": "Request"
+        },
+        "enableLiveMetricsFilters": true
+      },
+        "IsEncrypted": false,
+        "Values": {
+          "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+          "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+          "CosmosDbConnectionString": "AccountEndpoint=https://ibas-db-account-3315.documents.azure.com:443/;AccountKey=RPLN3ZgzoWV4QlX6uksMfZImUdnJnCSPUS7vI0SWyjRnCKea7HoGq5twATLY8ZTXOpZdJBcXCJDJACDbQwgk3g==;"
         }
-    }
+      }
+
 }
